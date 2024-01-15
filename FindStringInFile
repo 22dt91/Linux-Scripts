@@ -1,0 +1,8 @@
+!#/bin/bash
+
+if [ $# -eq 2 ]; then
+    find . -iname "*$1*" | xargs grep $2 -bn
+else
+    echo "missing input params: FileName String"
+    exit 1
+fi

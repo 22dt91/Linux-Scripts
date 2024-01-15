@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ $# -ne 1 ]; then
+    echo "Missing params: fileName"
+    exit 1
+fi
+
+find -name $1 2>&1 | grep -v "Permission denied" | xargs ls -rlt

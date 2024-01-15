@@ -1,0 +1,13 @@
+#!/bin/bash
+
+fixName=$(echo $1 | tr -- ' '  _)
+
+echo $fixName
+
+echo $1
+
+touch $PWD/$fixName
+
+cp "$1" "$PWD/$fixName"
+
+rm "$1"
